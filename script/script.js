@@ -1,9 +1,6 @@
 
 'use strict';
 
-// Placeholder for script.js
-// Add JavaScript functionality here, such as form validation or user interactions
-
 document.addEventListener('DOMContentLoaded', function () {
 
 	const main = document.querySelector('.main');
