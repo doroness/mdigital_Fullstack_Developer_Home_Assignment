@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -164,10 +171,19 @@ body {
 }
 
 .main {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	min-height: 100vh;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
 	position: relative;
 }
@@ -206,11 +222,18 @@ body {
 	background-color: var(--mainTurkize);
 	z-index: 99;
 	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
 	justify-content: flex-end;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	padding: 0 20px;
 	margin-bottom: 20px;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -228,17 +251,34 @@ body {
 /* ------------------*/
 
 .form__label {
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 40%;
 	flex: 1 1 40%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
 	justify-content: flex-start;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	line-height: 1;
 }
 
 .form {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	text-align: right;
 }
@@ -246,6 +286,8 @@ body {
 .form__group {
 	position: relative;
 	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	border: none;
 	border-bottom: 1px #fff solid;
@@ -295,6 +337,8 @@ body {
 	padding: 15px 0;
 	margin-bottom: 20px;
 	border: 2px var(--mainTurkize) solid;
+	-webkit-transition: all 0.25s ease;
+	-o-transition: all 0.25s ease;
 	transition: all 0.25s ease;
 }
 
@@ -304,6 +348,7 @@ body {
 }
 
 .form__button--monthly {
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	text-decoration: none;
 	color: #fff;
@@ -341,12 +386,16 @@ body {
 }
 
 .form__label.form__label--checkbox {
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 auto;
 	flex: 1 1 auto;
 	width: 20px;
 	height: 15px;
 	background-color: transparent;
 	padding: 0;
 	border: 1px #fff solid;
+	-ms-flex-item-align: center;
+	-ms-grid-row-align: center;
 	align-self: center;
 	margin-left: 10px;
 
@@ -412,6 +461,8 @@ body {
 	right: 0;
 	top: -10px;
 	line-height: 1;
+	-webkit-transition: all 0.25s ease;
+	-o-transition: all 0.25s ease;
 	transition: all 0.25s ease;
 }
 
@@ -439,10 +490,19 @@ body {
 }
 
 .message__section.message--show {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	min-height: 100vh;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 }
 
@@ -462,8 +522,12 @@ body {
 }
 
 .message__social-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	font-size: 14px;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 }
 
@@ -478,6 +542,8 @@ body {
 
 @media (max-width: 768px) {
 	.main {
+		-webkit-box-pack: start;
+		-ms-flex-pack: start;
 		justify-content: flex-start;
 	}
 
