@@ -1,0 +1,492 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+button {
+	border: none;
+	outline: none;
+}
+
+/* END CSS RESET */
+
+:root {
+	--bgColor: #000000;
+	--mainTurkize: #00D6D1;
+	--errorRed: #FF3939;
+	--fontFamily: "Assistant", sans-serif;
+	--mainTitleFS: 34px;
+	--textFS: 24px;
+	--smallTextFS: 14px;
+}
+
+body {
+	background-color: var(--bgColor);
+	font-family: var(--fontFamily);
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-size: var(--textFS);
+	text-align: right;
+	direction: rtl;
+	color: #fff;
+}
+
+.main {
+	display: flex;
+	min-height: 100vh;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+}
+
+.main__section {
+	max-width: 600px;
+}
+
+.main__section-header {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.main__section-title {
+	font-size: var(--mainTitleFS);
+	margin-bottom: 10px;
+}
+
+.main__section-subtitle {
+	font-size: var(--textFS);
+	margin-bottom: 10px;
+}
+
+.main__section-description {
+	font-size: var(--smallTextFS);
+	text-align: right;
+	margin-bottom: 10px;
+}
+
+/* ------------------*/
+/* -- Top Bar ------ */
+/* ------------------*/
+
+.top-bar {
+	min-height: 40px;
+	background-color: var(--mainTurkize);
+	z-index: 99;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 0 20px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+}
+
+.top-bar--hidden {
+	display: none;
+}
+
+.top-bar__icon {
+	width: 16px;
+	height: 16px;
+}
+
+/* ------------------*/
+/* ----- FORM ------ */
+/* ------------------*/
+
+.form__label {
+	flex: 1 1 40%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	line-height: 1;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: right;
+}
+
+.form__group {
+	position: relative;
+	width: 100%;
+	display: flex;
+	border: none;
+	border-bottom: 1px #fff solid;
+	margin-bottom: 55px
+}
+
+.form__group.form__group--email {
+	margin-bottom: 35px;
+}
+
+.form__group.form__group--terms {
+	margin-bottom: 35px;
+}
+
+.form__input {
+	display: block;
+	width: 100%;
+	padding: 0;
+	line-height: 1;
+	background: transparent;
+	border: none;
+	text-align: right;
+	padding: 5px;
+	font-size: var(--textFS);
+	color: #fff;
+	font-family: var(--fontFamily);
+
+}
+
+.form__input:active,
+.form__input:focus {
+	outline: none;
+	background-color: #fff;
+	color: #000;
+}
+
+.form__button {
+	width: 100%;
+	font-size: var(--textFS);
+	background-color: var(--mainTurkize);
+	font-family: var(--fontFamily);
+	font-weight: 700;
+	border-radius: 10px;
+	display: block;
+	text-align: center;
+	line-height: 1;
+	padding: 15px 0;
+	margin-bottom: 20px;
+	border: 2px var(--mainTurkize) solid;
+	transition: all 0.25s ease;
+}
+
+.form__button:hover {
+	background-color: #fff;
+	border-color: #fff;
+}
+
+.form__button--monthly {
+	box-sizing: border-box;
+	text-decoration: none;
+	color: #fff;
+	background-color: transparent;
+	border: 2px #fff solid;
+}
+
+.form__button--monthly:hover {
+	background-color: var(--mainTurkize);
+	border: 2px var(--mainTurkize) solid;
+	color: #000;
+}
+
+.form__input#email {
+	direction: ltr;
+	text-align: left;
+}
+
+.form__description {
+	font-size: var(--smallTextFS);
+	line-height: 1.1;
+}
+
+.form__group--terms {
+	border: none;
+}
+
+.form__checkbox#terms {
+	width: 1px;
+	height: 1px;
+	position: absolute;
+	z-index: -999;
+	left: 0;
+	bottom: 0;
+}
+
+.form__label.form__label--checkbox {
+	flex: 1 1 auto;
+	width: 20px;
+	height: 15px;
+	background-color: transparent;
+	padding: 0;
+	border: 1px #fff solid;
+	align-self: center;
+	margin-left: 10px;
+
+}
+
+.form__checkbox:checked~.form__label--checkbox {
+	background-color: var(--mainTurkize);
+}
+
+.form__validation {
+	font-size: 14px;
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	width: 100%;
+	color: var(--errorRed);
+}
+
+.custom-select {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+}
+
+.select-box {
+	background-color: #000;
+	color: #fff;
+	padding: 10px 0;
+	cursor: pointer;
+}
+
+.select-options {
+	display: none;
+	position: absolute;
+	width: 100%;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	z-index: 1;
+}
+
+.select-options li {
+	padding: 5px;
+	cursor: pointer;
+	color: #000;
+}
+
+.select-options li:hover {
+	background-color: #e0f7fa;
+}
+
+.custom-select.open .select-options {
+	display: block;
+}
+
+.custom-select__title {
+	font-size: var(--smallTextFS);
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	top: -10px;
+	line-height: 1;
+	transition: all 0.25s ease;
+}
+
+.custom-select__title--show {
+	visibility: visible;
+	opacity: 1;
+}
+
+.main.form--success {
+	padding: 0;
+}
+
+.main.form--success .top-bar,
+.main.form--success .main__section {
+	visibility: hidden;
+	display: none;
+}
+
+/* -----------------------*/
+/*  Success Message------ */
+/* -----------------------*/
+.message__section {
+	display: none;
+
+}
+
+.message__section.message--show {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.message__section {
+	text-align: center
+}
+
+.message__title {
+	font-size: var(--mainTitleFS);
+	margin-bottom: 10px;
+
+}
+
+.message__description {
+	font-size: var(--textFS);
+	margin-bottom: 20px;
+}
+
+.message__social-list {
+	display: flex;
+	font-size: 14px;
+	justify-content: center;
+}
+
+.message__social-item {
+	max-width: 24px;
+	margin: 0 5px;
+}
+
+.message__social-item img {
+	width: 100%;
+}
+
+@media (max-width: 768px) {
+	.main {
+		justify-content: flex-start;
+	}
+
+	.main__section {
+		max-width: 90%;
+	}
+
+	.form__label.form__label--checkbox {
+		width: 35px;
+		height: 15px;
+	}
+}

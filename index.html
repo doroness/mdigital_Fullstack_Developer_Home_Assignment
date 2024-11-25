@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Full-stack Developer Home Assignment: Responsive Form</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style/style.css">
+	<script src="script/script.js"></script>
+
+<body>
+
+	<main class="main">
+
+		<section class="top-bar">
+			<img src="img/x.png" alt="Top bar icon" class="top-bar__icon">
+			<!-- Top bar content goes here -->
+		</section>
+
+		<section class="main__section">
+
+			<header class="main__section-header">
+				<h1 class="main__section-title">חשמלית משפחתית <br>מחכה לכם באולמות התצוגה</h1>
+				<h2 class="main__section-subtitle">השאירו פרטים ונעשה את זה EASY</h2>
+				<p class="main__section-description">כל השדות המסומנים ב-* הינם חובה</p>
+			</header>
+
+			<form class="form form--user" id="user-form">
+				<div class="form__group form__group--full-name">
+					<label class="form__label" for="full-name">שם מלא*</label>
+					<input class="form__input" type="text" id="full-name" name="full-name" required>
+					<div class="form__validation"></div>
+				</div>
+
+				<div class="form__group form__group--phone-number">
+					<label class="form__label" for="phone-number">נייד*:</label>
+					<input class="form__input" type="tel" id="phone-number" name="phone-number" required>
+					<div class="form__validation"></div>
+				</div>
+
+				<div class="form__group form__group--showroom custom-select">
+					<div class="custom-select__title" tabindex="0">אולם תצוגה</div>
+					<div class="select-box" id="showroom" tabindex="0">אולם תצוגה</div>
+					<ul class="select-options">
+						<li data-value="tel-aviv">תל אביב</li>
+						<li data-value="nof-hagalil">נוף גליל</li>
+						<li data-value="rishon-lezion">ראשון לציון</li>
+						<li data-value="tiberias">טבריה</li>
+						<li data-value="raanana">רעננה</li>
+						<li data-value="haifa">חיפה</li>
+						<li data-value="ashdod">אשדוד</li>
+					</ul>
+
+					<input type="hidden" name="showroom" id="showroom">
+
+					<div class="form__validation"></div>
+				</div>
+
+				<div class="form__group form__group--email">
+					<label class="form__label" for="email">מייל*</label>
+					<input class="form__input" type="email" id="email" name="email" required>
+					<div class="form__validation"></div>
+				</div>
+
+				<div class="form__group form__group--terms">
+					<input class="form__checkbox" type="checkbox" id="terms" name="terms">
+					<label class="form__label form__label--checkbox" for="terms"></label>
+					<p class="form__description">מאשר קבלת דיוור ותוכן שיווקי ופרסומי מהחברות השונות בקבוצת באמצעות סמס,
+						וואטסאפ, דואר אלקטרוני, וחיוג אוטומטי. רשימת החברות המפורטות במדיניות פרטיות של האתר</p>
+					<div class="form__validation"></div>
+				</div>
+
+				<button class="form__button" type="submit">חזרו אלי טלפונית</button>
+			</form>
+			<a class="form__button form__button--monthly" href=#>למינוי חודשי אונליין</a>
+		</section>
+
+		<section class="message message__section">
+			<h2 class="message__title">תודה! קיבלנו את פרטיך</h2>
+			<p class="message__description">נציג יחזור אליך בהקדם</p>
+			<ul class="message__social-list">
+				<li class="message__social-item"><img src="img/instagram.png" alt="Instagram"></li>
+				<li class="message__social-item"><img src="img/globe.png" alt="Website"></li>
+				<li class="message__social-item"><img src="img/facebook.png" alt="Facebook"></li>
+			</ul>
+		</section>
+
+
+	</main>
+
+</body>
+
+</html>
